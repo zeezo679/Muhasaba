@@ -1,0 +1,310 @@
+<!DOCTYPE html><html class="dark" dir="rtl" lang="ar" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MUHASABA | انضبط. انجز. ارتق.</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700;800;900&amp;family=Cairo:wght@700;800&amp;family=Hanken+Grotesk:wght@400;500&amp;family=Geist:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#0c0e13",
+                    "outline": "#99907e",
+                    "on-surface-variant": "#d0c5b2",
+                    "primary": "#e6c364",
+                    "tertiary-fixed": "#d4e3ff",
+                    "surface-bright": "#37393f",
+                    "on-primary": "#3d2e00",
+                    "on-secondary": "#003919",
+                    "surface": "#111318",
+                    "on-tertiary-fixed": "#001c39",
+                    "tertiary-fixed-dim": "#a4c9ff",
+                    "primary-fixed-dim": "#e6c364",
+                    "secondary-fixed": "#6bfe9c",
+                    "on-secondary-fixed-variant": "#005228",
+                    "on-background": "#e2e2e9",
+                    "error-container": "#93000a",
+                    "primary-container": "#c9a84c",
+                    "on-tertiary-container": "#004078",
+                    "background": "#111318",
+                    "on-secondary-fixed": "#00210c",
+                    "tertiary": "#a5c9ff",
+                    "on-primary-fixed": "#241a00",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#06bb63",
+                    "error": "#ffb4ab",
+                    "on-tertiary": "#00315d",
+                    "secondary": "#4ae183",
+                    "inverse-on-surface": "#2e3036",
+                    "surface-container-low": "#1a1b21",
+                    "on-tertiary-fixed-variant": "#004884",
+                    "surface-container": "#1e1f25",
+                    "secondary-fixed-dim": "#4ae183",
+                    "outline-variant": "#4d4637",
+                    "surface-container-high": "#282a2f",
+                    "on-primary-container": "#503d00",
+                    "inverse-primary": "#755b00",
+                    "on-primary-fixed-variant": "#584400",
+                    "on-secondary-container": "#00431f",
+                    "surface-container-highest": "#33353a",
+                    "surface-tint": "#e6c364",
+                    "tertiary-container": "#70aeff",
+                    "primary-fixed": "#ffe08f",
+                    "surface-dim": "#111318",
+                    "on-error": "#690005",
+                    "surface-variant": "#33353a",
+                    "on-surface": "#e2e2e9",
+                    "inverse-surface": "#e2e2e9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "touch-target": "48px",
+                    "gutter": "16px",
+                    "container-margin": "20px",
+                    "base-unit": "4px",
+                    "card-gap": "12px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Chivo"],
+                    "arabic-display": ["Cairo"],
+                    "label-bold": ["Geist"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Chivo"],
+                    "display-lg": ["Chivo"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "arabic-display": ["36px", {"lineHeight": "52px", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #111318;
+            color: #e2e2e9;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 16px;
+        }
+        .pillar-card {
+            background-color: #161920;
+            border: 1px solid #242933;
+            transition: all 0.3s ease;
+        }
+        .pillar-card:hover {
+            border-color: rgba(230, 195, 100, 0.4);
+            transform: translateY(-4px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20 flex justify-between items-center px-container-margin py-1">
+<div class="flex items-center gap-3">
+<img src="logoo.png" alt="Muhasaba Logo" class="h-28 md:h-32 w-auto object-contain drop-shadow-md">
+</div>
+<button class="bg-primary text-on-primary px-8 py-2 font-label-bold text-label-bold rounded-lg active:scale-95 transition-transform hover:bg-primary-container">انضم</button>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="px-container-margin py-16 md:py-32 flex flex-col items-center text-center max-w-5xl mx-auto relative overflow-hidden">
+<div class="absolute inset-0 -z-10 opacity-20">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/20 blur-[120px] rounded-full"></div>
+</div>
+<h1 class="font-arabic-display text-arabic-display md:text-[64px] md:leading-[80px] text-on-background mb-6">
+                انضبط. انجز. ارتق.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+                لوحة التحكم اليومية للرجل المسلم الطموح. صُممت لتوازن بين التميز الروحي والبدني والذهني في قالب تقني عصري.
+            </p>
+<form id="waitlist-form" action="https://formspree.io/f/mbdwnorw" method="POST" class="w-full max-w-lg relative">
+<div id="form-content" class="flex flex-col md:flex-row gap-3 w-full transition-all duration-500">
+<input name="email" required class="flex-grow bg-surface-container-high border border-outline-variant text-on-surface px-6 py-4 rounded-lg focus:outline-none focus:border-primary font-body-md text-right" placeholder="البريد الإلكتروني" type="email">
+<button type="submit" id="submit-btn" class="bg-primary text-on-primary font-label-bold text-label-bold px-10 py-4 rounded-lg hover:bg-primary-container transition-colors active:scale-95 whitespace-nowrap min-w-[180px] flex items-center justify-center">
+                    انضم لقائمة الانتظار
+                </button>
+</div>
+<div id="success-message" class="absolute inset-0 flex items-center justify-center gap-2 bg-primary/20 border border-primary/30 text-primary px-6 py-4 rounded-lg font-label-bold opacity-0 pointer-events-none transition-all duration-500 transform translate-y-2 scale-95">
+<span class="material-symbols-outlined">check_circle</span>
+<span>تم الانضمام بنجاح! شكراً لك.</span>
+</div>
+</form>
+</section>
+<!-- Pillars Section (Bento Grid Style) -->
+<section class="px-container-margin py-16 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Spiritual Pillar -->
+<div class="pillar-card p-8 rounded-xl border-t-[3px] border-primary flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">mosque</span>
+</div>
+<h3 class="font-arabic-display text-2xl mb-4 text-on-background">الجانب الروحي</h3>
+<p class="font-body-md text-on-surface-variant mb-8 leading-relaxed">
+                            تتبع صلواتك، أذكارك، ووردك القرآني بيقظة تامة. اجعل التقوى هي الوقود الأساسي لكل يوم.
+                        </p>
+</div>
+<div class="flex items-center gap-2 text-primary font-label-bold">
+<span class="material-symbols-outlined">verified</span>
+<span class="">انضباط روحي</span>
+</div>
+</div>
+<!-- Physical Pillar -->
+<div class="pillar-card p-8 rounded-xl border-t-[3px] border-secondary flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+</div>
+<h3 class="font-arabic-display text-2xl mb-4 text-on-background">الجانب البدني</h3>
+<p class="font-body-md text-on-surface-variant mb-8 leading-relaxed">
+                            جسدك أمانة. تتبع تمارين القوة، الحركة، والنظام الغذائي لبناء قوة تخدم رسالتك.
+                        </p>
+</div>
+<div class="flex items-center gap-2 text-secondary font-label-bold">
+<span class="material-symbols-outlined">bolt</span>
+<span class="">قوة بدنية</span>
+</div>
+</div>
+<!-- Mental Pillar -->
+<div class="pillar-card p-8 rounded-xl border-t-[3px] border-tertiary flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-lg bg-tertiary/10 flex items-center justify-center mb-6 text-tertiary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<h3 class="font-arabic-display text-2xl mb-4 text-on-background">الجانب الذهني</h3>
+<p class="font-body-md text-on-surface-variant mb-8 leading-relaxed">
+                            إتقان التركيز والعمل العميق. صمم روتينك الذهني لزيادة الإنتاجية والتحصيل المعرفي.
+                        </p>
+</div>
+<div class="flex items-center gap-2 text-tertiary font-label-bold">
+<span class="material-symbols-outlined">lightbulb</span>
+<span class="">صفاء ذهني</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof / Teaser -->
+<section class="px-container-margin py-24 text-center border-t border-outline-variant/10">
+<div class="max-w-4xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6 text-on-background">
+                    قريباً على iOS و Android
+                </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic mb-12">
+                    "حَاسِبُوا أَنْفُسَكُمْ قَبْلَ أَنْ تُحَاسَبُوا"
+                </p>
+<div class="flex justify-center items-center gap-8 opacity-40">
+
+
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-12 px-container-margin border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2 text-center md:text-right">
+<div class="font-headline-lg text-headline-lg text-primary">MUHASABA</div>
+<p class="font-body-md text-on-surface-variant">حَاسِبُوا أَنْفُسَكُمْ قَبْلَ أَنْ تُحَاسَبُوا".</p>
+</div>
+<div class="flex gap-8 font-label-bold text-label-bold text-on-surface-variant">
+<a class="hover:text-primary transition-colors duration-200" href="#">Spiritual</a>
+<a class="hover:text-primary transition-colors duration-200" href="#">Physical</a>
+<a class="hover:text-primary transition-colors duration-200" href="#">Mental</a>
+<a class="hover:text-primary transition-colors duration-200" href="#">Privacy</a>
+</div>
+<div class="font-body-md text-on-surface-variant">
+                    © 2026 MUHASABA.
+                </div>
+</div>
+</footer>
+</main>
+
+<script>
+    const form = document.getElementById('waitlist-form');
+    const formContent = document.getElementById('form-content');
+    const successMessage = document.getElementById('success-message');
+    const submitBtn = document.getElementById('submit-btn');
+
+    // Check if user already submitted before
+    if (localStorage.getItem('muhasaba_waitlist_joined')) {
+        formContent.classList.add('hidden');
+        successMessage.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2', 'scale-95');
+        successMessage.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+    }
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        if (localStorage.getItem('muhasaba_waitlist_joined')) {
+            alert('لقد قمت بالتسجيل مسبقاً!');
+            return;
+        }
+
+        // Change button state
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin" style="font-size: 20px;">progress_activity</span>';
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Save to local storage to prevent duplicate submissions
+                localStorage.setItem('muhasaba_waitlist_joined', 'true');
+
+                // Success: Hide form, show message with animation
+                formContent.classList.add('opacity-0', 'pointer-events-none', 'scale-95');
+                
+                setTimeout(() => {
+                    successMessage.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2', 'scale-95');
+                    successMessage.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+                }, 200);
+
+            } else {
+                // Return to normal on arbitrary error
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                alert('عذراً، حدث خطأ. حاول مرة أخرى.');
+            }
+        } catch (error) {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            alert('عذراً، حدث خطأ في الاتصال.');
+        }
+    });
+</script>
+</body></html>
